@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+$bluesky-primary: mat.define-palette(mat.$indigo-palette);
+$bluesky-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$bluesky-warn: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$bluesky-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $bluesky-primary,
+      accent: $bluesky-accent,
+      warn: $bluesky-warn,
+    ),
+  )
+);
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Poppins, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center text-align;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 80%;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #231942;
+  margin: 0;
+  font-family: Poppins, Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-app-background {
+  background-color: #231942;
+}
+
+.mat-primary
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled)
+  .mdc-list-item__primary-text {
+  color: #f44336;
+  background-color: #5e548e;
+}
+
+.mat-mdc-option:hover:not(.mdc-list-item--disabled),
+.mat-mdc-option:focus.mdc-list-item,
+.mat-mdc-option.mat-mdc-option-active.mdc-list-item,
+.mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(
+    .mdc-list-item--disabled
+  ) {
+  background-color: #5e548e;
+}
+
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after,
+.mat-primary
+  .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+  color: #f44336;
+}
+
+.mat-mdc-radio-button.mat-accent {
+  --mdc-radio-selected-focus-icon-color: #f44336;
+  --mdc-radio-selected-hover-icon-color: #f44336;
+  --mdc-radio-selected-pressed-icon-color: #f44336;
+  --mdc-radio-selected-icon-color: #f44336;
+  --mat-radio-checked-ripple-color: #f44336;
+}
+
+.mat-mdc-checkbox {
+    --mdc-checkbox-selected-focus-icon-color: #f44336;
+    --mdc-checkbox-selected-icon-color: #f44336;
+    --mdc-checkbox-selected-hover-icon-color: #f44336;
+    --mdc-checkbox-selected-pressed-icon-color: #f44336;
+
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #5e548e;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: #f44336;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  color: #f44336;
+}
+
+.mdc-form-field label {
+  color: white;
+}
+
+.mat-mdc-select-value-text {
+  color: white;
+}
+
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+  color: white;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
+  color: white;
+}
+
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above)
+  .mdc-menu-surface.mat-mdc-select-panel {
+  background-color: #231942;
+  background: #231942;
+}
+
+.mat-h2, .mat-headline-6, .mat-typography .mat-h2, .mat-typography .mat-headline-6, .mat-typography h2 {
+    color: white;
+}
